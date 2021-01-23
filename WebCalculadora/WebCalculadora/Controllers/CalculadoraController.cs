@@ -10,32 +10,45 @@ namespace WebCalculadora.Controllers
     [Route("api/[controller]")]
     public class CalculadoraController : Controller
     {
-     
-      
-            [HttpGet]
-            [Route ("suma")]
-            public int suma(int num1, int num2)
-            {
-                return num1 + num2;
-            }
-            [HttpPost]
-            [Route("suma")]
-            public int sumar([FromHeader] int num1, [FromHeader] int num2)
-            {
-                return num1 + num2;
-            }
+
+        [HttpGet]
+        [Route("suma")]
+        public int Sumag(int num1, int num2)
+        {
+            return num1 + num2;
+        }
+        [HttpPost]
+        [Route("suma")]
+        public int Sumap([FromHeader] int num1, [FromHeader] int num2)
+        {
+            return num1 + num2;
+        }
+
 
         [HttpGet]
         [Route("resta")]
-        public int resta(int num1, int num2)
+        public int Restag(int num1, int num2)
         {
             return num1 - num2;
         }
         [HttpPost]
         [Route("resta")]
-        public int restar([FromHeader] int num1, [FromHeader] int num2)
+        public int Restap([FromHeader] int num1, [FromHeader] int num2)
         {
             return num1 - num2;
+        }
+
+        [HttpGet]
+        [Route("multiplicacion")]
+        public int Multiplicaciong(int num1, int num2)
+        {
+            return num1 * num2;
+        }
+        [HttpPost]
+        [Route("multiplicacion")]
+        public int Multiplicacionp([FromHeader] int num1, [FromHeader] int num2)
+        {
+            return num1 * num2;
         }
 
 
